@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SVM Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+
+    <section class ="main">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <nav class="navbar navbar-dark bg-dark" style = "border-radius: 5px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>Heart Attack Predictor</b></a>
+        
+          <form class="d-flex" role="search" >
+            <button type="button" class="btn btn-outline-info" style="border: 2px solid lightblue;border-radius: 5px 25px;"  type="submit"><b>Mohammed Sabir</b></button>
+            <button type="button" class="btn btn-outline-info" style="border: 2px solid lightblue;border-radius: 5px 25px;"  type="submit"><b>1HK20CS091</b></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class = "container" style = "box-shadow: 10px 10px 5px 12px lightblue; border-radius: 20px;">
+    <br>
+      <div class="text-center" >
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      </div>
+    <div class="text-center" >
+    <h2>Support Vector Machine: Model Activated</h2>
+    </div>
+    <div class="text-center" >
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      </div>
+      <br>
+
+    <form method="post">
+      {% csrf_token %}
+      {% comment %} <div class="text-center" >
+      <div class="mb-3">
+        <div class="spinner-border text-info" role="status">
+        <label class="form-label" ><b>Machine Activated</b></label><span class="visually-hidden">Loading...</span>
+        <b> <input type="text" style="border: 2px solid black;border-radius: 5px 25px;"class="form-control" /></b>
+        </div>
+      </div>
+      </div>  {% endcomment %}
+      <div class="row">
+      <div class="col">
+        <label class="form-label"><b>Age</b></label>
+        <input type="text" name="age" placeholder="18" style="border: 2px solid black; border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="col">
+        <label class="form-label"><b>Sex</b></label>
+        <input type="text" name="sex" placeholder="if Male=1 & Female=0"style="border: 2px solid black; border-radius: 5px 25px;" class="form-control" />
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <label class="form-label"><b>Chest pain</b></label>
+        <input type="text" name="cp" placeholder="0 - 3"style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="col">
+        <label class="form-label"><b>Resting blood pressure</b></label>
+        <input type="text" name="trestbps" placeholder="94 - 200"style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <label class="form-label"><b>Serum cholestoral in mg/dl</b></label>
+        <input type="text" name="chol" placeholder="125 - 560" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="col">
+        <label class="form-label"><b>Fasting blood sugar</b> </label>
+        <input type="text" name="fbs"placeholder="if Yes=1 & No=0" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <label class="form-label"><b>Electrocardiographic results</b></label>
+        <input type="text" name="restecg" placeholder="0 - 2"style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="col">
+        <label class="form-label"><b>Maximum heart rate achieved</b></label>
+        <input type="text" name="thalach" placeholder="71 - 202" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <label class="form-label"><b>Exercise induced angina</b></label>
+        <input type="text" name="exang" placeholder="if Yes=1 & No=0" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="col">
+        <label class="form-label"><b>Oldpeak</b></label>
+        <input type="text" name="oldpeak" placeholder="0 - 6.2" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+    </div>
+    <br>
+      <div class="mb-3">
+        <label class="form-label"><b>Slope of the peak exercise ST segment</b></label>
+        <input type="text" name="slope" placeholder="0 - 2" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"
+          ><b>Number of major vessels (0-3) colored by flourosopy</b></label
+        >
+        <input type="text" name="cp" placeholder="0 - 3"style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"
+          ><b>Thal: 0 = normal; 1 = fixed defect; 2 = reversable defect</b></label
+        >
+        <input type="text" name="thal" placeholder="1 - 3" style="border: 2px solid black;border-radius: 5px 25px;" class="form-control" />
+      </div>
+      <br>
+      {% comment %} <button type="submit" class="btn btn-primary">PREDICT</button> {% endcomment %}
+      <div class="text-center" >
+      <button type="submit" style="border: 2px solid red;" class="btn btn-outline-danger"><b>PREDICT WITH SVM MODEL</b></button>
+      <div class="form-text">24x7 Updating accuracy 92% </div>
+      <div class="mb-3">
+      <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" ><b>Prediction result:</b></label>
+        <b> <input type="text" placeholder="Predicted Result Will Be Shown Here...!" style="border: 2px solid black;border-radius: 5px 25px;" value="{{result}}" class="form-control" /></b>
+      </div>
+    </form>
+
+    </div>
+    </section>
+  </body>
+</html>
